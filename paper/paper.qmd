@@ -133,19 +133,25 @@ first_model <-
 #| echo: false
 #| eval: true
 #| label: tbl-modelresults
-#| tbl-cap: "Explanatory models of flight time based on wing width and wing length"
+#| tbl-cap: "Exaplain votes by gender and education"
 #| warning: false
-
-modelsummary::modelsummary(
+modelsummary(
   list(
-    "First model" = first_model
+    "Support Biden" = first_model
   ),
-  statistic = "mad",
-  fmt = 2
-)
+  statistic = "mad"
+  )
 ```
 
-
+```{r}
+#| echo: false
+#| eval: true
+#| label: fig-modelresults
+#| fig-cap: "Explanatory models of flight time based on wing width and wing length"
+#| warning: false
+modelplot(first_model, conf_level = 0.9) +
+  labs(x = "90 per cent credibility interval")
+```
 
 
 # Discussion
@@ -180,8 +186,8 @@ In @fig-ppcheckandposteriorvsprior-1 we implement a posterior predictive check. 
 In @fig-ppcheckandposteriorvsprior-2 we compare the posterior with the prior. This shows... 
 
 ```{r}
-#| eval: true
-#| echo: false
+#| eval: false
+#| echo: true
 #| message: false
 #| warning: false
 #| label: fig-ppcheckandposteriorvsprior
@@ -220,6 +226,7 @@ plot(first_model, "trace")
 
 plot(first_model, "rhat")
 ```
+
 
 
 

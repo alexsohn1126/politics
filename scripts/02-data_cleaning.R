@@ -1,5 +1,5 @@
 #### Preamble ####
-# Purpose: Downloads and saves the data from harvard server
+# Purpose: Cleans the data from harvard server
 # Author: Moohaeng Sohn
 # Date: March 5th, 2024
 # Contact: alex.sohn@mail.utoronto.ca
