@@ -1,27 +1,13 @@
 #### Preamble ####
-# Purpose: Downloads and saves the data from [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 11 February 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# Purpose: Downloads and saves the data from harvard server
+# Author: Moohaeng Sohn
+# Date: March 5th, 2024
+# Contact: alex.sohn@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
 
 
 #### Workspace setup ####
-library(boot)
-library(broom.mixed)
-library(collapse)
 library(dataverse)
-library(gutenbergr)
-library(janitor)
-library(knitr)
-library(marginaleffects)
-library(modelsummary)
-library(rstanarm)
-library(tidybayes)
-library(tidyverse)
-library(palmerpenguins)
 
 #### Download data ####
 ces2020 <-
@@ -35,8 +21,3 @@ ces2020 <-
 
 write_csv(ces2020, "data/raw_data/ces2020.csv")
 
-
-
-
-
-         
